@@ -21,7 +21,7 @@ const Hero: FC = () => {
         <div className="effects"></div>
         <div className="header-hero__content">
           <h2 className="header-hero__main-text">Vladyslav Zinchenko</h2>
-          <h3 className="header-hero__small-text">Junior Frontend Developer</h3>
+          <h3 className="header-hero__small-text">Frontend Developer</h3>
           <a
             className="header-hero__btn"
             target="_blank"
