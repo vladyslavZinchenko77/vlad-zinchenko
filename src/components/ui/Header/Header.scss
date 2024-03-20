@@ -1,0 +1,136 @@
+@import "../../../styles/variables.scss";
+
+.header {
+  background-color: $yellow-color;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+
+  .header__container {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .header__logo {
+    font-size: 20px;
+    font-weight: 400;
+    color: $dark-brown-color;
+    margin-left: 30px;
+  }
+
+  .header__menu {
+    @media screen and (max-width: $tablet-max) {
+      display: none;
+    }
+
+    .header__menu-list {
+      display: flex;
+      list-style: none;
+
+      .header__menu-item {
+        padding-right: 30px;
+
+        .header__menu-link {
+          text-decoration: none;
+          text-transform: uppercase;
+          font-size: 16px;
+          font-weight: 700;
+          color: $dark-brown-color;
+          transition: all 0.5s;
+
+          &:hover {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  .header__burger {
+    display: none;
+
+    @media screen and (max-width: $tablet-max) {
+      display: block;
+    }
+
+    &-icon {
+      width: 30px;
+      height: 20px;
+      margin-right: 20px;
+
+      span {
+        display: block;
+        height: 3px;
+        width: 30px;
+        background-color: $dark-brown-color;
+        margin-top: 5px;
+        border-radius: 5px;
+
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+
+      &.open {
+        span:first-child {
+          transform: translateY(8px) rotate(45deg);
+        }
+        span:nth-child(2n) {
+          opacity: 0;
+        }
+        span:last-child {
+          transform: translateY(-8px) rotate(-45deg);
+        }
+      }
+    }
+  }
+
+  &__burger-menu {
+    display: none;
+
+    @media screen and (max-width: $tablet-max) {
+      position: absolute;
+      top: 50px;
+      left: 0;
+      right: 0;
+      background-color: $dark-brown-color;
+
+      &--list {
+        .header__burger-menu--item {
+          display: flex;
+          justify-content: center;
+          transition: 0.2s;
+
+          &:hover {
+            background-color: $yellow-color;
+
+            .header__burger-menu--link {
+              color: $dark-brown-color;
+            }
+          }
+
+          .header__burger-menu--link {
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 20px;
+            color: #fff;
+            padding: 10px 0;
+            transition: 0.2s;
+          }
+        }
+      }
+    }
+
+    &.open {
+      @media screen and (max-width: $tablet-max) {
+        display: block;
+      }
+    }
+  }
+}
