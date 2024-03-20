@@ -1,0 +1,46 @@
+@import "../../../styles/variables.scss";
+
+.summary{
+    max-width: 100%;
+    padding: 100px 0;
+    .summary__container{
+        margin: 0 auto;
+    }
+    .summary__tittle{
+        font-size: 48px;
+        text-transform: uppercase;
+        font-weight: 400;
+        padding-left: 50px;
+        color: #333;
+        @media screen  and (max-width: $mobile-max){
+            font-size: 38px
+        }
+    }
+    .summary__content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 24px;
+        @media screen and (max-width: $mobile-max){
+            flex-direction: column;
+            padding: 0 24px;
+        }
+      
+            .summary__content-text{
+               font-size: 18px;
+               color: $dark-brown-color;
+               text-align: center;
+               @media screen and (max-width: $mobile-max) {
+                font-size: 18px;
+            }
+            }
+            .summary__content-img{
+                 @media screen and (max-width: $mobile-max) {
+                            width: 100%;
+                            height: auto;
+                            margin-top: 8px;
+                        }
+                    }
+            
+    }
+}

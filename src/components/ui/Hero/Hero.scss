@@ -6,7 +6,6 @@
         max-height: 100vh;
         max-width: 100%;
         position: relative;
-        
         left: 0;
         right: 0;
         overflow: hidden;
@@ -43,15 +42,16 @@
             right: 0;
           
            .header-hero__main-text{
-            font-size: 72px;
-            font-weight: 400;
-            color: #fff;
-            text-align: center;
-            animation: title-name 2s;
-            
-            @media screen  and (max-width:950px){
-               font-size: 48px;
-            }
+                font-size: 72px;
+                font-weight: 400;
+                color: #fff;
+                text-align: center;
+                animation: title-name 2s;
+                
+                @media screen  and (max-width:950px){
+                font-size: 48px;
+                }
+                
             @keyframes title-name {
                 from{
                     opacity: 0;
