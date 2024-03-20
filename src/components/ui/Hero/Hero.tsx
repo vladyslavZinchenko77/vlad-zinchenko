@@ -17,35 +17,6 @@ const Hero: FC = () => {
           muted={true}
           loop={true}
         ></video>
-        {/* <video
-          id="sd"
-          className="video-full-hd"
-          src="./img/sd.mp4"
-          type="video/mp4"
-          autoplay
-          muted
-          loop
-        ></video> */}
-        {/* <video
-          id="sd-middle"
-          style="display: none;"
-          className="video-full-hd"
-          src="./img/sd.mp4"
-          type="video/mp4"
-          autoplay
-          muted
-          loop
-        ></video> */}
-        {/* <video
-          id="sd-small"
-          style="display: none;"
-          class="video-full-hd"
-          src="./img/sd.mp4"
-          type="video/mp4"
-          autoplay
-          muted
-          loop
-        ></video> */}
 
         <div className="effects"></div>
         <div className="header-hero__content">
