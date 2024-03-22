@@ -20,10 +20,10 @@ const Summary: FC = () => {
 
           <Image
             className="summary__content-img"
-            src="/img/avatar2.png"
+            src="/img/avatar.jpg"
             alt="avatar"
-            width={431}
-            height={659}
+            width={300}
+            height={300}
           />
         </div>
       </div>
