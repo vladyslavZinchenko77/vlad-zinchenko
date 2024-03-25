@@ -5,7 +5,7 @@ import WorkItem from './WorkItem';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import 'swiper/css/effect-coverflow'; // Якщо використовуєте ефект coverflow
+import 'swiper/css/effect-coverflow';
 
 const SliderComponent = () => {
   const swiperRef = useRef(null);
@@ -20,7 +20,7 @@ const SliderComponent = () => {
     <div className="slider-container">
       <Swiper
         ref={swiperRef}
-        slidesPerView={5}
+        slidesPerView={3}
         spaceBetween={30}
         pagination={{
           clickable: true,
@@ -29,36 +29,34 @@ const SliderComponent = () => {
         loop={true}
         effect="coverflow"
         className="mySwiper"
+        style={{ padding: '20px 0' }}
       >
         <SwiperSlide>
-          <WorkItem>
-            <button>dece</button>
-          </WorkItem>
+          <WorkItem />
         </SwiperSlide>
         <SwiperSlide>
-          <WorkItem>
-            <button>dece</button>
-          </WorkItem>
+          <WorkItem />
         </SwiperSlide>
         <SwiperSlide>
-          <WorkItem>
-            <button>dece</button>
-          </WorkItem>
+          <WorkItem />
         </SwiperSlide>
         <SwiperSlide>
-          <WorkItem>
-            <button>dece</button>
-          </WorkItem>
+          <WorkItem />
         </SwiperSlide>
         <SwiperSlide>
-          <WorkItem>
-            <button>dece</button>
-          </WorkItem>
+          <WorkItem />
         </SwiperSlide>
         <SwiperSlide>
-          <WorkItem>
-            <button>dece</button>
-          </WorkItem>
+          <WorkItem />
+        </SwiperSlide>
+        <SwiperSlide>
+          <WorkItem />
+        </SwiperSlide>
+        <SwiperSlide>
+          <WorkItem />
+        </SwiperSlide>
+        <SwiperSlide>
+          <WorkItem />
         </SwiperSlide>
       </Swiper>
     </div>

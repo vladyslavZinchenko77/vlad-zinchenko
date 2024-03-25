@@ -73,8 +73,8 @@
             text-align: center;
             animation: title-profession 4s;
             background: linear-gradient(to right, #ffef00, #005bbb);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
           
             @keyframes title-profession {
               from {

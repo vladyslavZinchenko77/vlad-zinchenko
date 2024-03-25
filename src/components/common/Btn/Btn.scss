@@ -1,0 +1,61 @@
+.btn {
+  background: none;
+  text-decoration: inherit;
+  font-family: system-ui;
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #ffffff;
+  text-transform: capitalize;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 0 40px 20px rgba(0, 91, 187, 0.5)
+  
+}
+
+.link {
+  background: none;
+  text-decoration: inherit;
+  font-family: system-ui;
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #ffffff;
+  text-transform: capitalize;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 0 40px 20px rgba(0, 91, 187, 0.5);
+  transition: 1.2s;
+  
+}
+
+.border-gradient {
+  border: 10px solid;
+  border-image-slice: 1;
+  border-width: 5px;
+}
+.border-gradient-purple {
+  border-image-source: linear-gradient(to right, #005bbb, #ffef00);
+  &:hover{
+    box-shadow: none;
+    transition: 1.2s;
+    animation: btn 1.2s ease-in-out infinite;
+  }
+  @keyframes btn {
+    0%{
+      border-image-source: linear-gradient(to right, #005bbb, #ffef00)
+    }25%{
+      border-image-source: linear-gradient(to bottom, #005bbb, #ffef00)
+    }50%{
+      border-image-source: linear-gradient(to left, #005bbb, #ffef00)
+    }75%{
+      border-image-source: linear-gradient(to top, #005bbb, #ffef00)
+    }100%{
+      border-image-source: linear-gradient(to right, #005bbb, #ffef00)
+    }
+  }
+}

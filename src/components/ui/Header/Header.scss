@@ -1,13 +1,15 @@
 @import "../../../styles/variables.scss";
 
 .header {
-  background-color: $yellow-color;
-  position: fixed;
+  // position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
   z-index: 5;
-
+  @media screen and (max-width: $tablet-max) {
+     background: linear-gradient(270deg, #FDAB30 0%, #FDC830 72.92%);
+  }
   .header__container {
     max-width: 100%;
     margin: 0 auto;
@@ -41,11 +43,14 @@
           text-transform: uppercase;
           font-size: 16px;
           font-weight: 700;
-          color: $dark-brown-color;
+          color: #ffffff;
           transition: all 0.5s;
 
           &:hover {
-            color: #fff;
+            color: grey;
+            box-shadow: 0 0 20px 10px rgba(0, 91, 187, 0.5);
+            background-color: rgba(0, 91, 187, 0.5);
+            
           }
         }
       }
