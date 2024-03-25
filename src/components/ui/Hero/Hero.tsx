@@ -24,7 +24,7 @@ const Hero: FC = () => {
         <div className="header-hero__content">
           <h2 className="header-hero__main-text">Vladyslav Zinchenko</h2>
           <h3 className="header-hero__small-text">Frontend Developer</h3>
-          <Btn isLink={true} hRef={linkToCv}>
+          <Btn styles={{ marginTop: 24 }} isLink={true} hRef={linkToCv}>
             download CV{' '}
             <Image
               width={26}
