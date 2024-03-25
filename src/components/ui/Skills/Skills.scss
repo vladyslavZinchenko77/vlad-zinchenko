@@ -1,8 +1,8 @@
 
-
+@import "../../../styles/variables.scss";
 
 .skills{
-    background-color: #ffde59;
+    background: $yellow-color-gradient;
     .skills__container{
         margin: 0 auto;
         max-width: 1200px;
