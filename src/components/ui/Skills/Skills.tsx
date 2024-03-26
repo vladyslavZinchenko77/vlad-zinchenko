@@ -1,4 +1,6 @@
-import { FC } from 'react';
+'use client';
+import React, { FC, useState, useMemo } from 'react';
+import { Fragment } from 'react';
 import Image from 'next/image';
 import htmlSvg from '../../../../public/svg/html.svg';
 import cssSvg from '../../../../public/svg/css.svg';
@@ -11,7 +13,6 @@ import muiSvg from '../../../../public/svg/mui.svg';
 import styleCompSvg from '../../../../public/svg/styledcomponents.svg';
 import reactSvg from '../../../../public/svg/React-icon.svg';
 import nextSvg from '../../../../public/svg/nextjs.svg';
-
 import './Skills.scss';
 
 const skills = [
@@ -29,20 +30,40 @@ const skills = [
 ];
 
 const Skills: FC = () => {
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    setMousePosition({ x: e.clientX, y: e.clientY });
+  };
+
+  const parallaxOffset = useMemo(() => {
+    return {
+      x: (mousePosition.x - window.innerWidth / 2) / 20,
+      y: (mousePosition.y - window.innerHeight / 2) / 20,
+    };
+  }, [mousePosition]);
+
   return (
-    <section className="skills">
-      <h2 className="skills__tittle">My skills</h2>
+    <section className="skills" onMouseMove={handleMouseMove}>
+      <h2 className="skills__title">My skills</h2>
       <div className="skills__container">
         <div className="skills__wrap">
           {skills.map((skill, index) => (
-            <div className="skills__wrap-item" key={index}>
-              <Image
-                src={skill.icon}
-                width={150}
-                height={150}
-                alt={skill.name}
-              />
-            </div>
+            <Fragment key={index}>
+              <div
+                className="skills__wrap-item"
+                style={{
+                  transform: `translate(${parallaxOffset.x}px, ${parallaxOffset.y}px)`,
+                }}
+              >
+                <Image
+                  src={skill.icon}
+                  width={150}
+                  height={150}
+                  alt={skill.name}
+                />
+              </div>
+            </Fragment>
           ))}
         </div>
       </div>

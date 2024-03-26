@@ -9,7 +9,7 @@
         padding-left: 50px;
         padding-right: 50px;
     }
-    .skills__tittle{
+    .skills__title{
         font-size: 48px;
         color: #333;
         padding-left: 50px;
@@ -32,17 +32,7 @@
         @media screen and (max-width: 450px){
             grid-template-columns:  repeat(1, 1fr);
         }
-        .skills__wrap-item{
-        //     // fill: #333;
-        //     text-align: center;
-        //     opacity: 0;
-        //     transition: opacity 0.5s;
-            &:hover{
-                transition: all 0.5s;
-                transform: translateY(20px);
-            }
-         
-        }
+    
        
         
     }
