@@ -1,7 +1,7 @@
 .header-hero{
-    
     width: 100vw;
     height: 100vh;
+
     .header-hero__video-bg{
         max-height: 100vh;
         max-width: 100%;
@@ -9,6 +9,7 @@
         left: 0;
         right: 0;
         overflow: hidden;
+        
         .header-hero__video-bg video{
             max-width: 100%;
             max-height: 100vh;
@@ -54,16 +55,7 @@
               font-size: 48px;
             }
           
-            @keyframes title-name {
-              from {
-                opacity: 0;
-                transform: translateY(100px);
-              }
-              to {
-                opacity: 1;
-                transform: translateY(0);
-              }
-            }
+      
           }
           
           .header-hero__small-text {
@@ -73,19 +65,9 @@
             text-align: center;
             animation: title-profession 4s;
             background: linear-gradient(to right, #ffef00, #005bbb);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          
-            @keyframes title-profession {
-              from {
-                opacity: 0;
-                transform: translateY(50px);
-              }
-              to {
-                opacity: 1;
-                transform: translateY(0);
-              }
-            }
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+  
           
             @media screen and (max-width: 950px) {
               font-size: 28px;
@@ -95,70 +77,10 @@
               font-size: 22px;
             }
           }
-           .header-hero__btn{
-            text-transform: capitalize;
-            margin-top: 50px;
-            font-size: 20px;
-            padding: 10px 20px;
-            border-radius: 40px;
-            outline: none;
-            background-color: rgb(0, 0, 0, 0.1);
-            color: #fff;
-            border: 2px solid #fff;
-            transition: all 0.5s;
-            animation: title-button 5s;
-            text-decoration: none;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-                .header-hero__btn-text{
-                    padding-right: 5px;
-                }
-                .header-hero__btn-icon{
-                    fill: #fff;
-                }
-
-            @keyframes title-button {
-                from{
-                    opacity: 0;
-                    transform: translateY(50px);
-                }to{
-                    opacity: 1;
-                    transform: translateY(0);
-                }
-            }
-            &:hover{
-                background-color: #fff;
-                color: #333;
-                transition: all 0.5s;
-            }
-            
-            }
+         
             
         }
        
     }
-    .header-hero__scroll-icon{
-        margin-top: 80px;
-        .arrow.one{
-            margin-top: 50px;
-            animation: scroll 2s  infinite;
-        }
-        .arrow.two{
-            
-            position: relative;
-            bottom: 40px;
-            animation: scroll 2s  infinite 1s;
-        }
-        
-    }
-    @keyframes scroll {
-        from{
-            transform: translateY(1);
-            opacity: 1;
-        }to{
-            transform: translateY(30px);
-            opacity: 0;
-        }
-    }
+
 }

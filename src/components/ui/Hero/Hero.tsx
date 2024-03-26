@@ -1,7 +1,8 @@
 import { FC } from 'react';
 import Btn from '@/components/common/Btn/Btn';
 import Image from 'next/image';
-import '../../../../public/svg/down-arrow.svg';
+import ScrollIcon from '@/components/common/ScrollIcon/ScrollIcon';
+
 import './Hero.scss';
 
 const Hero: FC = () => {
@@ -33,24 +34,7 @@ const Hero: FC = () => {
               src={'/svg/download.svg'}
             />
           </Btn>
-          <div className="header-hero__scroll-icon">
-            <div className="arrow one">
-              <Image
-                width={40}
-                height={40}
-                alt="arrow-down"
-                src={'/svg/down-arrow.svg'}
-              />
-            </div>
-            <div className="arrow two">
-              <Image
-                width={40}
-                height={40}
-                alt="arrow-down"
-                src={'/svg/down-arrow.svg'}
-              />
-            </div>
-          </div>
+          <ScrollIcon />
         </div>
       </div>
     </section>

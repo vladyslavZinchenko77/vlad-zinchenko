@@ -6,7 +6,7 @@ import './Summary.scss';
 const Summary: FC = () => {
   return (
     <section className="summary">
-      <h2 className="summary__tittle">summary</h2>
+      <h2 className="summary__title">summary</h2>
       <div className="summary__container">
         <div className="summary__content">
           <p className="summary__content-text">
