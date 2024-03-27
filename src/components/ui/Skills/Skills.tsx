@@ -17,6 +17,8 @@ import muiSvg from '../../../../public/svg/mui.svg';
 import styleCompSvg from '../../../../public/svg/styledcomponents.svg';
 import reactSvg from '../../../../public/svg/React-icon.svg';
 import nextSvg from '../../../../public/svg/nextjs.svg';
+import gitSvg from '../../../../public/svg/git.svg';
+
 import './Skills.scss';
 
 const skills = [
@@ -29,6 +31,7 @@ const skills = [
   { name: 'js', icon: jsSvg },
   { name: 'ts', icon: tsSvg },
   { name: 'style-components', icon: styleCompSvg },
+  { name: 'git', icon: gitSvg },
   { name: 'react', icon: reactSvg },
   { name: 'next.js', icon: nextSvg },
 ];
