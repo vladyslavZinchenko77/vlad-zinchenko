@@ -4,18 +4,48 @@
     max-width: 800px;
     height: 0;
     padding-bottom: 86%;
-    background: linear-gradient(270deg, #FDAB30 0%, #FDC830 72.92%);
+    // background: linear-gradient(270deg, #FDAB30 0%, #FDC830 72.92%);
     border-radius: 20px;
     box-shadow: 0px 10px 15px rgba(188,29,103,0.35); 
+
+    .work-item__title{
+      padding: 20px 0 20px 20px;
+      color: #333;
+
+    }
+    .work-item__desc{
+      padding-left: 20px;
+      color: #333;
+
+    }
   }
   
   .work-item__img-wrap{
     display: flex;
     justify-content: center;
+
+
     .work-item__img{
       max-width: 500px;
       padding: 20px;
       height: auto;
     }
+   
+
   }
   
+.yellow{
+  background: linear-gradient(270deg, #FDAB30 0%, #FDC830 72.92%);
+}
+
+.grey{
+  background: linear-gradient(270deg, #9bbfa9 0%, #809789 72.92%);
+}
+
+.red{
+  background: linear-gradient(270deg, #F03952 0%, #D11831 100%);
+}
+
+.green{
+  background: linear-gradient(270deg, #14A085 0%, #4EBA6F 72.92%);
+}

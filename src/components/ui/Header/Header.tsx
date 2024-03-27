@@ -1,9 +1,30 @@
 'use client';
-import { FC, useState } from 'react';
+import { FC, useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
 import './Header.scss';
 
 const Header: FC = () => {
-  const [isOpenMenu, setIsOpenMenu] = useState<boolean>(false);
+  const menuItemsRef = useRef<HTMLUListElement>(null);
+
+  useEffect(() => {
+    if (menuItemsRef.current) {
+      const menuItems = menuItemsRef.current.children;
+      gsap.from(menuItems, {
+        y: -50,
+        delay: 4,
+        duration: 1,
+        stagger: 0.1,
+        ease: 'power4.out',
+      });
+      gsap.to(menuItems, {
+        delay: 4,
+        y: 0,
+        duration: 1,
+        stagger: 0.1,
+        ease: 'power4.out',
+      });
+    }
+  }, []);
 
   return (
     <header className="header">
@@ -12,7 +33,7 @@ const Header: FC = () => {
           <p className="header__logo-text">CV Landing Page</p>
         </div>
         <nav className="header__menu">
-          <ul className="header__menu-list">
+          <ul ref={menuItemsRef} className="header__menu-list">
             {menuItems.map((item) => (
               <li key={item.id} className="header__menu-item">
                 <a href={`#${item.id}`} className="header__menu-link">
@@ -22,28 +43,7 @@ const Header: FC = () => {
             ))}
           </ul>
         </nav>
-        <div
-          onClick={() => setIsOpenMenu(!isOpenMenu)}
-          className="header__burger"
-        >
-          <div className={`header__burger-icon ${isOpenMenu ? 'open' : ''}`}>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
       </div>
-      <nav className={`header__burger-menu ${isOpenMenu ? 'open' : ''}`}>
-        <ul className="header__burger-menu--list">
-          {menuItems.map((item) => (
-            <li key={item.id} className="header__burger-menu--item">
-              <a href={`#${item.id}`} className="header__burger-menu--link">
-                {item.title}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
     </header>
   );
 };

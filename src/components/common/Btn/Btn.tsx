@@ -7,13 +7,14 @@ interface BtnProps {
   isLink: boolean;
   hRef?: string;
   styles?: CSSProperties;
+  id?: string;
 }
 
-const Btn: FC<BtnProps> = ({ onClick, children, isLink, hRef, styles }) => {
+const Btn: FC<BtnProps> = ({ onClick, children, isLink, hRef, styles, id }) => {
   return (
     <>
       {isLink ? (
-        <div className="on-light">
+        <div id={id} className="on-light">
           <a
             style={styles}
             href={hRef}
@@ -24,7 +25,7 @@ const Btn: FC<BtnProps> = ({ onClick, children, isLink, hRef, styles }) => {
           </a>
         </div>
       ) : (
-        <div className="on-light">
+        <div id={id} className="on-light">
           <button
             style={styles}
             className="btn border-gradient border-gradient-purple"

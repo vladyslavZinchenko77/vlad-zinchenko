@@ -30,3 +30,17 @@ body,
   font-family: 'Montserrat', sans-serif;
 
 }
+
+
+// Timeliner
+
+
+.css-423au0-MuiTimelineItem-root::before{
+
+  padding: 60px 18px;
+}
+
+.css-1ami7lv-MuiTimelineConnector-root{
+  background: linear-gradient(to bottom,  #005bbb,#ffef00);
+  width: 2px;
+}

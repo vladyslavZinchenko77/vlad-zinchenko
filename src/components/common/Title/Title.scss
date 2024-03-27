@@ -1,9 +1,14 @@
+@import "../../../styles/variables.scss";
+
 .title {
-    font-family: Arial, sans-serif;
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-    overflow: hidden; // для обрезания текста, который еще не распечатан
-    white-space: nowrap; // для обрезания текста, который еще не распечатан
+  font-size: 48px;
+  text-transform: uppercase;
+  font-weight: 400;
+  padding-left: 50px;
+  color: #333;
+
+  @media screen  and (max-width: $mobile-max){
+      font-size: 38px
+  }
   }
   
