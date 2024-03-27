@@ -10,8 +10,8 @@ const Works: FC = () => {
 
   useEffect(() => {
     const loadSliderComponent = async () => {
-      const module = await import('./SliderComponent');
-      setSliderComponent(() => module.default);
+      const sliderModule = await import('./SliderComponent');
+      setSliderComponent(() => sliderModule.default);
     };
 
     loadSliderComponent();
