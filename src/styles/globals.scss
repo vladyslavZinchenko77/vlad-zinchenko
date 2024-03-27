@@ -50,13 +50,13 @@ body,
 padding: 10px;
 }
 
-
- section.experience > ul > li:nth-child(4) > div.MuiTimelineSeparator-root.css-1fe7e6p-MuiTimelineSeparator-root > span{
+section.experience > ul > li:nth-child(4) .MuiTimelineSeparator-root span {
   background-color: #ff523c;
 }
-section.experience > ul > li:nth-child(2) > div.MuiTimelineSeparator-root.css-1fe7e6p-MuiTimelineSeparator-root > span{
+
+section.experience > ul > li:nth-child(2) .MuiTimelineSeparator-root span {
   background-color: #000000;
 }
-section.experience > ul > li:nth-child(3) > div.MuiTimelineSeparator-root.css-1fe7e6p-MuiTimelineSeparator-root > span{
+section.experience > ul > li:nth-child(3) .MuiTimelineSeparator-root span {
   background-color: #000000;
 }
