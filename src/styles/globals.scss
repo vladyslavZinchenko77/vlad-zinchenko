@@ -35,14 +35,11 @@ body,
 // Timeliner
 
 
-.css-423au0-MuiTimelineItem-root::before{
 
-  padding: 60px 18px;
-}
-
-.css-1ami7lv-MuiTimelineConnector-root{
+.MuiTimelineConnector-root{
   background: linear-gradient(to bottom,  #005bbb,#ffef00);
   width: 2px;
+  
 }
 
 .css-v6mo1y-MuiTimelineDot-root{

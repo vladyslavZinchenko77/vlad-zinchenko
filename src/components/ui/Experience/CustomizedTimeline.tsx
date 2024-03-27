@@ -51,10 +51,12 @@ const CustomizedTimeline: React.FC = () => {
       {workExperience.map((experience, index) => (
         <TimelineItem key={index}>
           <TimelineSeparator>
-            <TimelineDot>
-              {experience.icon} {/* Использование пользовательской иконки */}
-            </TimelineDot>
-            {index < workExperience.length - 1 && <TimelineConnector />}
+            <TimelineDot>{experience.icon}</TimelineDot>
+            {index < workExperience.length - 1 && (
+              <TimelineConnector
+                style={{ backgroundColor: 'red', minHeight: '40px' }}
+              />
+            )}
           </TimelineSeparator>
           <TimelineContent>
             <Typography variant="h6" component="span">
