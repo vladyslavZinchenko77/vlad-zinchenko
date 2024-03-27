@@ -1,0 +1,16 @@
+.finger{
+    padding: 48px;
+    display: flex;
+    justify-content: center;
+    animation: finger 2s ease-in-out infinite;
+}
+
+@keyframes finger {
+    0%{
+        transform: translateX(0);
+    }50%{
+        transform: translateX(50px);
+    }to{
+        transform: translateX(0);
+    }
+}

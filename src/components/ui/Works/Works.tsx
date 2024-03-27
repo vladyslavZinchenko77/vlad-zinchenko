@@ -2,6 +2,7 @@
 import { FC, useEffect, useState } from 'react';
 
 import Title from '@/components/common/Title/Title';
+import FingerAnimation from '@/components/common/FingerAnimation/FingerAnimation';
 import './Works.scss';
 
 const Works: FC = () => {
@@ -20,6 +21,7 @@ const Works: FC = () => {
     <section className="works">
       <Title text="projects" />
       {SliderComponent && <SliderComponent />}
+      <FingerAnimation />
     </section>
   );
 };
