@@ -1,11 +1,29 @@
-import { FC } from 'react';
+'use client';
+import { FC, useEffect } from 'react';
+import { gsap } from 'gsap';
 import Btn from '@/components/common/Btn/Btn';
 import Image from 'next/image';
 import ScrollIcon from '@/components/common/ScrollIcon/ScrollIcon';
-
 import './Hero.scss';
 
 const Hero: FC = () => {
+  useEffect(() => {
+    gsap.from('.header-hero__main-text, .header-hero__small-text, #btn', {
+      opacity: 0,
+      y: 50,
+      duration: 2,
+      delay: 1,
+      stagger: 0.2,
+    });
+    gsap.to('.header-hero__main-text, .header-hero__small-text, #btn', {
+      opacity: 1,
+      y: 0,
+      duration: 2,
+      delay: 1,
+      stagger: 0.2,
+    });
+  }, []);
+
   const linkToCv =
     'https://drive.google.com/file/d/1D6AslG792JdJG4N-G6yZabKeFVCj-qfn/view?usp=sharing';
 
@@ -25,7 +43,12 @@ const Hero: FC = () => {
         <div className="header-hero__content">
           <h2 className="header-hero__main-text">Vladyslav Zinchenko</h2>
           <h3 className="header-hero__small-text">Frontend Developer</h3>
-          <Btn styles={{ marginTop: 24 }} isLink={true} hRef={linkToCv}>
+          <Btn
+            id="btn"
+            styles={{ marginTop: 24 }}
+            isLink={true}
+            hRef={linkToCv}
+          >
             download CV{' '}
             <Image
               width={26}
