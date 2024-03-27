@@ -1,25 +1,48 @@
 'use client';
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { WorkItemInterface } from '@/types/commonTypes';
 import WorkItem from './WorkItem';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import 'swiper/css/effect-coverflow';
 
+const works: WorkItemInterface[] = [
+  {
+    title: 'Knife Town',
+    description: 'Small online knife shop',
+    imgUrl: '/img/work10.png',
+    colorClassName: 'yellow',
+    projectLink: 'https://knife-town-h7wv.vercel.app/',
+  },
+  {
+    title: 'Dmytro Sablin',
+    description: 'Website for a civil construction engineer',
+    imgUrl: '/img/work7.png',
+    colorClassName: 'red',
+    projectLink: 'https://dsablin-engineer.vercel.app/',
+  },
+  {
+    title: 'Istep computers school',
+    description: 'lorem colorem description',
+    imgUrl: '/img/work9.png',
+    colorClassName: 'grey',
+    projectLink: 'https://istep-computer-graphics-and-design-x12z.vercel.app/',
+  },
+  {
+    title: 'Franny',
+    description: 'lorem colorem description',
+    imgUrl: '/img/work5.png',
+    colorClassName: 'green',
+    projectLink: 'https://franny-delta.vercel.app/',
+  },
+];
+
 const SliderComponent = () => {
-  const swiperRef = useRef(null);
-
-  //   useEffect(() => {
-  //     if (swiperRef.current) {
-  //       //   console.log(swiperRef.current.swiper);
-  //     }
-  //   }, []);
-
   return (
     <div className="slider-container">
       <Swiper
-        ref={swiperRef}
         slidesPerView={3}
         spaceBetween={30}
         pagination={{
@@ -31,33 +54,17 @@ const SliderComponent = () => {
         className="mySwiper"
         style={{ padding: '20px 0' }}
       >
-        <SwiperSlide>
-          <WorkItem />
-        </SwiperSlide>
-        <SwiperSlide>
-          <WorkItem />
-        </SwiperSlide>
-        <SwiperSlide>
-          <WorkItem />
-        </SwiperSlide>
-        <SwiperSlide>
-          <WorkItem />
-        </SwiperSlide>
-        <SwiperSlide>
-          <WorkItem />
-        </SwiperSlide>
-        <SwiperSlide>
-          <WorkItem />
-        </SwiperSlide>
-        <SwiperSlide>
-          <WorkItem />
-        </SwiperSlide>
-        <SwiperSlide>
-          <WorkItem />
-        </SwiperSlide>
-        <SwiperSlide>
-          <WorkItem />
-        </SwiperSlide>
+        {works.map((item, index) => (
+          <SwiperSlide key={index}>
+            <WorkItem
+              title={item.title}
+              description={item.description}
+              imgUrl={item.imgUrl}
+              projectLink={item.projectLink}
+              colorClassName={item.colorClassName}
+            />
+          </SwiperSlide>
+        ))}
       </Swiper>
     </div>
   );

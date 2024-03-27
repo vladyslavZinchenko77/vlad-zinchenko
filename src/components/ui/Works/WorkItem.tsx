@@ -1,26 +1,26 @@
 import React, { FC } from 'react';
-
+import { WorkItemInterface } from '@/types/commonTypes';
 import Image from 'next/image';
-
-// import work1 from '/img/work9.png';
-
-import work1 from '../../../../public/img/work9.png';
 
 import './WorksItem.scss';
 
-interface WorkItemProps {}
-
-const WorkItem: FC<WorkItemProps> = ({}) => {
+const WorkItem: FC<WorkItemInterface> = ({
+  title,
+  description,
+  imgUrl,
+  colorClassName,
+  projectLink,
+}) => {
   return (
-    <a href="">
-      <div className="work-item">
-        <h2>Title</h2>
-        <p>Description</p>
+    <a href={projectLink} target="_blank" style={{ textDecoration: 'none' }}>
+      <div className={`work-item ${colorClassName}`}>
+        <h2 className="work-item__title">{title}</h2>
+        <p className="work-item__desc">{description}</p>
         <div className="work-item__img-wrap">
           <Image
             className="work-item__img"
-            src={work1}
-            alt="i-step"
+            src={imgUrl}
+            alt={title}
             width={1110}
             height={660}
           />
