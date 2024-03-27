@@ -3,22 +3,12 @@
 
 .skills{
     background: $yellow-color-gradient;
+    padding: 40px 0;
     .skills__container{
         margin: 0 auto;
         max-width: 1200px;
         padding-left: 50px;
         padding-right: 50px;
-    }
-    .skills__title{
-        font-size: 48px;
-        color: #333;
-        padding-left: 50px;
-        padding-top: 50px;
-        text-transform: uppercase;
-        @media screen  and (max-width:350px){
-            font-size: 38px
-        }
-        
     }
     .skills__wrap{
         padding-top: 50px;

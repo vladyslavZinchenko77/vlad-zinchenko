@@ -1,12 +1,14 @@
 import { FC } from 'react';
 import Image from 'next/image';
 
+import Title from '@/components/common/Title/Title';
+
 import './Summary.scss';
 
 const Summary: FC = () => {
   return (
     <section className="summary">
-      <h2 className="summary__title">summary</h2>
+      <Title text="summary" />
       <div className="summary__container">
         <div className="summary__content">
           <p className="summary__content-text">

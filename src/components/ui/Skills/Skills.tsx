@@ -1,7 +1,11 @@
 'use client';
-import React, { FC, useState, useMemo } from 'react';
+import React, { FC } from 'react';
 import { Fragment } from 'react';
+
 import Image from 'next/image';
+
+import Title from '@/components/common/Title/Title';
+
 import htmlSvg from '../../../../public/svg/html.svg';
 import cssSvg from '../../../../public/svg/css.svg';
 import jsSvg from '../../../../public/svg/js.svg';
@@ -30,32 +34,14 @@ const skills = [
 ];
 
 const Skills: FC = () => {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    setMousePosition({ x: e.clientX, y: e.clientY });
-  };
-
-  const parallaxOffset = useMemo(() => {
-    return {
-      x: (mousePosition.x - window.innerWidth / 2) / 20,
-      y: (mousePosition.y - window.innerHeight / 2) / 20,
-    };
-  }, [mousePosition]);
-
   return (
-    <section className="skills" onMouseMove={handleMouseMove}>
-      <h2 className="skills__title">My skills</h2>
+    <section className="skills">
+      <Title text="skills" />
       <div className="skills__container">
         <div className="skills__wrap">
           {skills.map((skill, index) => (
             <Fragment key={index}>
-              <div
-                className="skills__wrap-item"
-                style={{
-                  transform: `translate(${parallaxOffset.x}px, ${parallaxOffset.y}px)`,
-                }}
-              >
+              <div className="skills__wrap-item">
                 <Image
                   src={skill.icon}
                   width={150}

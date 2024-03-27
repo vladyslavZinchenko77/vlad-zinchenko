@@ -6,16 +6,7 @@
     .summary__container{
         margin: 0 auto;
     }
-    .summary__title{
-        font-size: 48px;
-        text-transform: uppercase;
-        font-weight: 400;
-        padding-left: 50px;
-        color: #333;
-        @media screen  and (max-width: $mobile-max){
-            font-size: 38px
-        }
-    }
+
     .summary__content{
         display: flex;
         justify-content: center;
@@ -32,6 +23,7 @@
                color: $dark-brown-color;
                text-align: center;
                width: 50%;
+               padding-right: 24px;
                @media screen and (max-width: $mobile-max) {
                 font-size: 18px;
             }
