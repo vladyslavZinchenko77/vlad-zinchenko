@@ -8,6 +8,8 @@ import TimelineDot from '@mui/lab/TimelineDot';
 import WorkIcon from '@mui/icons-material/Work';
 import Typography from '@mui/material/Typography';
 
+import Image from 'next/image';
+
 const workExperience = [
   {
     position: 'Architect & CG Artist',
