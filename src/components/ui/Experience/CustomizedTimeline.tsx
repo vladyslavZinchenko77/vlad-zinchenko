@@ -51,9 +51,7 @@ const CustomizedTimeline: React.FC = () => {
       {workExperience.map((experience, index) => (
         <TimelineItem key={index}>
           <TimelineSeparator>
-            <TimelineDot>
-              {experience.icon} {/* Использование пользовательской иконки */}
-            </TimelineDot>
+            <TimelineDot>{experience.icon}</TimelineDot>
             {index < workExperience.length - 1 && <TimelineConnector />}
           </TimelineSeparator>
           <TimelineContent>
