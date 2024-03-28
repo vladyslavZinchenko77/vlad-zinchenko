@@ -6,7 +6,6 @@ import Summary from '@/components/ui/Summary/Summary';
 import Works from '@/components/ui/Works/Works';
 import Skills from '@/components/ui/Skills/Skills';
 import Experience from '@/components/ui/Experience/Experience';
-import Education from '@/components/ui/Education/Education';
 import Contacts from '@/components/ui/Contacts/Contacts';
 import Footer from '@/components/ui/Footer/Footer';
 
@@ -19,7 +18,6 @@ export default function Home() {
       <Works />
       <Skills />
       <Experience />
-      <Education />
       <Contacts />
       <Footer />
     </main>
