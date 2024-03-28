@@ -1,5 +1,7 @@
 import { FC } from 'react';
 
+import { ContactItemType } from '@/types/commonTypes';
+
 import Title from '@/components/common/Title/Title';
 
 import LocationOnIcon from '@mui/icons-material/LocationOn';
@@ -9,7 +11,7 @@ import TelegramIcon from '@mui/icons-material/Telegram';
 
 import './Contacts.scss';
 
-const contacts = [
+const contacts: ContactItemType[] = [
   { icon: <LocationOnIcon />, title: 'Location', text: 'Ukraine' },
   { icon: <PhoneIphoneIcon />, title: 'Phone', text: '+38 (098) 253 2614' },
   {

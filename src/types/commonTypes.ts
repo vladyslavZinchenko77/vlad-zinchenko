@@ -12,4 +12,11 @@ export interface WorkItemInterface{
  export  type SocialsType = {
     icon: React.ReactNode;
     url: string;
-  }[];
+  };
+
+
+export type ContactItemType = {
+  icon: React.ReactNode; 
+  title: string; 
+  text: string;
+}

@@ -9,7 +9,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 
 import './Footer.scss';
 
-const socials: SocialsType = [
+const socials: SocialsType[] = [
   {
     icon: <FacebookIcon className="footer__icon" />,
     url: 'https://www.facebook.com/Vladyslav.Zinchenko',
