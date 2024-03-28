@@ -1,0 +1,22 @@
+.footer{
+    padding: 10px 0;
+    .footer__container{     
+        display: flex;
+        justify-content: center;
+        align-items: center;    
+    }
+}
+
+
+
+.footer__link{
+    cursor: pointer;
+    margin-left: 10px;
+  .footer__icon{
+         transition: all 0.2s;
+    &:hover{
+        color: gray;
+        transition: all 0.2s;
+    }
+  }
+}
