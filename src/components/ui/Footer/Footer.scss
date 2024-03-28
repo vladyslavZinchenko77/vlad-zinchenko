@@ -1,3 +1,5 @@
+@import "../../../styles/variables.scss";
+
 .footer{
     padding: 10px 0;
     .footer__container{     
@@ -14,6 +16,7 @@
     margin-left: 10px;
   .footer__icon{
          transition: all 0.2s;
+         color: $blue-color ;
     &:hover{
         color: gray;
         transition: all 0.2s;
