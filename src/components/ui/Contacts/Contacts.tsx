@@ -32,7 +32,7 @@ const Contacts: FC = () => {
         <div className="contacts__wrap">
           {contacts.map((item, index) => {
             return (
-              <div className="contacts__wrap-item">
+              <div key={index} className="contacts__wrap-item">
                 <div className="contacts__wrap-item--icon">{item.icon}</div>
                 <div className="contacts__wrap-item--wrapper">
                   <h3 className="contacts__wrap-item--title">{item.title}</h3>
