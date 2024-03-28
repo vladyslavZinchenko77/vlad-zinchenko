@@ -8,3 +8,8 @@ export interface WorkItemInterface{
     projectLink: string;
   }
   
+
+ export  type SocialsType = {
+    icon: React.ReactNode;
+    url: string;
+  }[];
