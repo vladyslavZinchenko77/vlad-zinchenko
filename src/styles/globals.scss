@@ -60,3 +60,18 @@ section.experience > ul > li:nth-child(2) .MuiTimelineSeparator-root span {
 section.experience > ul > li:nth-child(3) .MuiTimelineSeparator-root span {
   background-color: #000000;
 }
+
+
+// TEST FOR VERCEL
+
+body > main > section.experience > ul > li:nth-child(1) > div.MuiTimelineSeparator-root.css-11tgw8h > span.MuiTimelineConnector-root.css-idv8vo{
+  background: linear-gradient(to bottom,  #005bbb,#ffef00);
+}
+
+body > main > section.experience > ul > li:nth-child(2) > div.MuiTimelineSeparator-root.css-11tgw8h > span.MuiTimelineConnector-root.css-idv8vo{
+  background: linear-gradient(to bottom,  #005bbb,#ffef00);
+}
+
+body > main > section.experience > ul > li:nth-child(1) > div.MuiTimelineSeparator-root.css-11tgw8h{
+  padding: 20px;
+}
