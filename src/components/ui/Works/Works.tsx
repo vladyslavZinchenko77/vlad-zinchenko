@@ -19,7 +19,7 @@ const Works: FC = () => {
 
   return (
     <section className="works">
-      <Title text="projects" />
+      <Title id="works-title" text="projects" />
       {SliderComponent && <SliderComponent />}
       <FingerAnimation />
     </section>

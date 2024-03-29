@@ -1,14 +1,50 @@
-import { FC } from 'react';
+'use client';
+import React, { FC, useEffect } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';
-
 import Title from '@/components/common/Title/Title';
-
 import './Summary.scss';
 
 const Summary: FC = () => {
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    console.log('useEffect triggered');
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.summary',
+        start: 'top 80%',
+        toggleActions: 'restart none none none',
+        onEnter: () => console.log('ScrollTrigger entered'),
+        onLeave: () => console.log('ScrollTrigger left'),
+      },
+    });
+
+    console.log('Timeline created');
+
+    tl.fromTo(
+      '#summary-title',
+      { opacity: 0, y: 50 },
+      { opacity: 1, y: 0, duration: 1 }
+    )
+      .fromTo(
+        '.summary__content-text',
+        { opacity: 0, y: 50 },
+        { opacity: 1, y: 0, duration: 1 },
+        '-=0.5'
+      )
+      .fromTo(
+        '.summary__content-img',
+        { opacity: 0, x: -50 },
+        { opacity: 1, x: 0, duration: 1 },
+        '-=0.5'
+      );
+  }, []);
+
   return (
     <section className="summary">
-      <Title text="summary" />
+      <Title text="summary" id="summary-title" />
       <div className="summary__container">
         <div className="summary__content">
           <p className="summary__content-text">
@@ -19,7 +55,6 @@ const Summary: FC = () => {
             the right decisions quickly, have a deeply analytical mindset,
             sociable, fast learner.
           </p>
-
           <Image
             className="summary__content-img"
             src="/img/avatar.jpg"
