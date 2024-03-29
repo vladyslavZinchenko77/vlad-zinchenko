@@ -10,6 +10,7 @@ const Header: FC = () => {
     if (menuItemsRef.current) {
       const menuItems = menuItemsRef.current.children;
       gsap.from(menuItems, {
+        opacity: 0,
         y: -50,
         delay: 4,
         duration: 1,
@@ -17,6 +18,7 @@ const Header: FC = () => {
         ease: 'power4.out',
       });
       gsap.to(menuItems, {
+        opacity: 1,
         delay: 4,
         y: 0,
         duration: 1,
