@@ -1,4 +1,7 @@
-import { FC } from 'react';
+'use client';
+import { FC, useEffect } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import { ContactItemType } from '@/types/commonTypes';
 
@@ -27,6 +30,37 @@ const contacts: ContactItemType[] = [
 ];
 
 const Contacts: FC = () => {
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    console.log('useEffect triggered');
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.contacts',
+        start: 'top',
+        toggleActions: 'restart none none none',
+        onEnter: () => console.log('ScrollTrigger entered'),
+        onLeave: () => console.log('ScrollTrigger left'),
+      },
+    });
+
+    console.log('Timeline created');
+
+    tl.fromTo(
+      '#contacts-title',
+      { opacity: 0, y: 50 },
+      { opacity: 1, y: 0, duration: 1 }
+    );
+
+    contacts.forEach((_, index) => {
+      tl.fromTo(
+        `.contacts__wrap-item:nth-child(${index + 1})`,
+        { opacity: 0, y: 50 },
+        { opacity: 1, y: 0, duration: 1 },
+        index * 0.5 // Задержка для каждого контакта
+      );
+    });
+  }, []);
   return (
     <section className="contacts">
       <Title id="contacts-title" text="My contacts" />
