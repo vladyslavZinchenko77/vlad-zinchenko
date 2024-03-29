@@ -4,9 +4,13 @@ import Image from 'next/image';
 
 import './FingerAnimation.scss';
 
-const FingerAnimation: FC = () => {
+interface FingerAnimProps {
+  id: string;
+}
+
+const FingerAnimation: FC<FingerAnimProps> = ({ id }) => {
   return (
-    <div className="finger">
+    <div id={id} className="finger">
       <Image width={31} height={31} alt="finger" src={'/svg/finger.svg'} />
     </div>
   );
