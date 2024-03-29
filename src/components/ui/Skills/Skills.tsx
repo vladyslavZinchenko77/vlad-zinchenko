@@ -42,7 +42,7 @@ const Skills: FC = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: '.skills',
-        start: 'top 80%',
+        start: 'top',
         toggleActions: 'restart none none none',
       },
     });
@@ -51,19 +51,27 @@ const Skills: FC = () => {
       '#skills-title',
       { opacity: 0, y: 50 },
       { opacity: 1, y: 0, duration: 1 }
-    )
-      .fromTo(
-        '.skill',
+    ).fromTo(
+      '.skill',
+      { opacity: 0, y: 50 },
+      { opacity: 1, y: 0, duration: 1 },
+      '-=0.5'
+    );
+    // .fromTo(
+    //   '.skills__wrap-item',
+    //   { opacity: 0, y: 50, delay: 1 },
+    //   { opacity: 1, y: 0, duration: 1 },
+    //   '-=0.5'
+    // );
+
+    skills.forEach((_, index) => {
+      tl.fromTo(
+        `.skills__wrap-item:nth-child(${index + 1})`,
         { opacity: 0, y: 50 },
         { opacity: 1, y: 0, duration: 1 },
-        '-=0.5'
-      )
-      .fromTo(
-        '.skills__wrap-item',
-        { opacity: 0, y: 50, delay: 1 },
-        { opacity: 1, y: 0, duration: 1 },
-        '-=0.5'
+        index * 0.5
       );
+    });
   }, []);
 
   return (

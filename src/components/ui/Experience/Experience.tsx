@@ -15,7 +15,7 @@ const Experience: FC = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: '.experience',
-        start: 'top 80%',
+        start: 'top',
         toggleActions: 'restart none none none',
       },
     });
