@@ -1,10 +1,7 @@
 'use client';
-import React, { FC } from 'react';
-import { Fragment } from 'react';
-
-import Image from 'next/image';
-
-import Title from '@/components/common/Title/Title';
+import React, { FC, useEffect } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import htmlSvg from '../../../../public/svg/html.svg';
 import cssSvg from '../../../../public/svg/css.svg';
@@ -19,6 +16,8 @@ import reactSvg from '../../../../public/svg/React-icon.svg';
 import nextSvg from '../../../../public/svg/nextjs.svg';
 import gitSvg from '../../../../public/svg/git.svg';
 
+import Image from 'next/image';
+import Title from '@/components/common/Title/Title';
 import './Skills.scss';
 
 const skills = [
@@ -37,13 +36,43 @@ const skills = [
 ];
 
 const Skills: FC = () => {
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.skills',
+        start: 'top 80%',
+        toggleActions: 'restart none none none',
+      },
+    });
+
+    tl.fromTo(
+      '#skills-title',
+      { opacity: 0, y: 50 },
+      { opacity: 1, y: 0, duration: 1 }
+    )
+      .fromTo(
+        '.skill',
+        { opacity: 0, y: 50 },
+        { opacity: 1, y: 0, duration: 1 },
+        '-=0.5'
+      )
+      .fromTo(
+        '.skills__wrap-item',
+        { opacity: 0, y: 50, delay: 1 },
+        { opacity: 1, y: 0, duration: 1 },
+        '-=0.5'
+      );
+  }, []);
+
   return (
     <section className="skills">
       <Title id="skills-title" text="skills" />
       <div className="skills__container">
         <div className="skills__wrap">
           {skills.map((skill, index) => (
-            <Fragment key={index}>
+            <div key={index}>
               <div className="skills__wrap-item">
                 <Image
                   src={skill.icon}
@@ -52,7 +81,7 @@ const Skills: FC = () => {
                   alt={skill.name}
                 />
               </div>
-            </Fragment>
+            </div>
           ))}
         </div>
       </div>
