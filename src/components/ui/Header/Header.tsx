@@ -1,6 +1,7 @@
 'use client';
 import { FC, useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
+import Logo from '@/components/common/Logo/Logo';
 import './Header.scss';
 
 const Header: FC = () => {
@@ -39,7 +40,8 @@ const Header: FC = () => {
     <header className="header" id="header">
       <div className="header__container">
         <div className="header__logo">
-          <p className="header__logo-text">CV Landing Page</p>
+          {/* <p className="header__logo-text">CV Landing Page</p> */}
+          <Logo />
         </div>
         <nav className="header__menu">
           <ul ref={menuItemsRef} className="header__menu-list">
