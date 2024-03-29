@@ -8,7 +8,7 @@ import './Experience.scss';
 const Experience: FC = () => {
   return (
     <section className="experience">
-      <Title text={'Experience'} />
+      <Title id="experience-title" text={'Experience'} />
       <CustomizedTimeline />
     </section>
   );

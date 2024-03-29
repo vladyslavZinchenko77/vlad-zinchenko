@@ -39,7 +39,7 @@ const skills = [
 const Skills: FC = () => {
   return (
     <section className="skills">
-      <Title text="skills" />
+      <Title id="skills-title" text="skills" />
       <div className="skills__container">
         <div className="skills__wrap">
           {skills.map((skill, index) => (

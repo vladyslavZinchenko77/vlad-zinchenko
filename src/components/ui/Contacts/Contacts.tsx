@@ -29,7 +29,7 @@ const contacts: ContactItemType[] = [
 const Contacts: FC = () => {
   return (
     <section className="contacts">
-      <Title text="My contacts" />
+      <Title id="contacts-title" text="My contacts" />
       <div className="contacts__container">
         <div className="contacts__wrap">
           {contacts.map((item, index) => {
