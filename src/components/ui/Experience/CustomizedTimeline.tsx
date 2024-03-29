@@ -1,4 +1,4 @@
-import React from 'react';
+import { FC } from 'react';
 import Timeline from '@mui/lab/Timeline';
 import TimelineItem from '@mui/lab/TimelineItem';
 import TimelineSeparator from '@mui/lab/TimelineSeparator';
@@ -17,7 +17,9 @@ interface Experience {
   duration: string;
   icon: JSX.Element;
 }
-
+interface CustomizedTimelineProps {
+  id: string;
+}
 const workExperience: Experience[] = [
   {
     position: 'Architect & CG Artist',
@@ -45,9 +47,9 @@ const workExperience: Experience[] = [
   },
 ];
 
-const CustomizedTimeline: React.FC = () => {
+const CustomizedTimeline: FC<CustomizedTimelineProps> = ({ id }) => {
   return (
-    <Timeline position="alternate">
+    <Timeline id={id} position="alternate">
       {workExperience.map((experience, index) => (
         <TimelineItem key={index}>
           <TimelineSeparator>
