@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import { useBreakpoints } from '@/hooks/useBreakpoints';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { WorkItemInterface } from '@/types/commonTypes';
 import WorkItem from './WorkItem';
@@ -40,10 +41,12 @@ const works: WorkItemInterface[] = [
 ];
 
 const SliderComponent = () => {
+  const { isDesktop } = useBreakpoints();
+
   return (
     <div className="slider-container">
       <Swiper
-        slidesPerView={3}
+        slidesPerView={isDesktop ? 3 : 1}
         spaceBetween={30}
         pagination={{
           clickable: true,
@@ -52,7 +55,7 @@ const SliderComponent = () => {
         loop={true}
         effect="coverflow"
         className="mySwiper"
-        style={{ padding: '20px 0' }}
+        style={{ padding: '20px 20px' }}
       >
         {works.map((item, index) => (
           <SwiperSlide key={index}>

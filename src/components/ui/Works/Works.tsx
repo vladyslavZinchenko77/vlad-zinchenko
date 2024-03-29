@@ -49,7 +49,7 @@ const Works: FC = () => {
   }, []);
 
   return (
-    <section className="works">
+    <section className="works" id="projects">
       <Title id="works-title" text="projects" />
       <div className="slider-component">
         {SliderComponent && <SliderComponent />}

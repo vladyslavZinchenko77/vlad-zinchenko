@@ -37,6 +37,7 @@
 
       .header__menu-item {
         padding-right: 30px;
+        opacity: 0;
 
         .header__menu-link {
           text-decoration: none;
@@ -45,6 +46,7 @@
           font-weight: 700;
           color: #ffffff;
           transition: all 0.5s;
+          transform: translateY(-50px);
          
 
           &:hover {
@@ -140,3 +142,7 @@
     }
   }
 }
+
+
+
+

@@ -1,15 +1,24 @@
 'use client';
 import { FC, useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
+import Logo from '@/components/common/Logo/Logo';
 import './Header.scss';
 
 const Header: FC = () => {
   const menuItemsRef = useRef<HTMLUListElement>(null);
 
+  const scrollToSection = (id: string) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   useEffect(() => {
     if (menuItemsRef.current) {
       const menuItems = menuItemsRef.current.children;
       gsap.from(menuItems, {
+        opacity: 0,
         y: -50,
         delay: 4,
         duration: 1,
@@ -17,6 +26,7 @@ const Header: FC = () => {
         ease: 'power4.out',
       });
       gsap.to(menuItems, {
+        opacity: 1,
         delay: 4,
         y: 0,
         duration: 1,
@@ -27,16 +37,23 @@ const Header: FC = () => {
   }, []);
 
   return (
-    <header className="header">
+    <header className="header" id="header">
       <div className="header__container">
         <div className="header__logo">
-          <p className="header__logo-text">CV Landing Page</p>
+          {/* <p className="header__logo-text">CV Landing Page</p> */}
+          <Logo />
         </div>
         <nav className="header__menu">
           <ul ref={menuItemsRef} className="header__menu-list">
             {menuItems.map((item) => (
               <li key={item.id} className="header__menu-item">
-                <a href={`#${item.id}`} className="header__menu-link">
+                <a
+                  href={`#${item.id}`}
+                  className="header__menu-link"
+                  onClick={() => {
+                    scrollToSection(item.sectionId);
+                  }}
+                >
                   {item.title}
                 </a>
               </li>
@@ -51,10 +68,9 @@ const Header: FC = () => {
 export default Header;
 
 const menuItems = [
-  { id: 'home', title: 'home' },
-  { id: 'summary', title: 'summary' },
-  { id: 'skills', title: 'skills' },
-  { id: 'works', title: 'works' },
-  { id: 'education', title: 'education' },
-  { id: 'contacts', title: 'contacts' },
+  { id: 'homeLink', title: 'home', sectionId: 'header' },
+  { id: 'summaryLink', title: 'summary', sectionId: 'summary' },
+  { id: 'skillsLink', title: 'skills', sectionId: 'skills' },
+  { id: 'worksLink', title: 'projects', sectionId: 'projects' },
+  { id: 'contactsLink', title: 'contacts', sectionId: 'contacts' },
 ];

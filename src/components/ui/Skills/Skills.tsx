@@ -75,7 +75,7 @@ const Skills: FC = () => {
   }, []);
 
   return (
-    <section className="skills">
+    <section className="skills" id="skills">
       <Title id="skills-title" text="skills" />
       <div className="skills__container">
         <div className="skills__wrap">

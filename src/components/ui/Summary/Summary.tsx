@@ -43,7 +43,7 @@ const Summary: FC = () => {
   }, []);
 
   return (
-    <section className="summary">
+    <section className="summary" id="summary">
       <Title text="summary" id="summary-title" />
       <div className="summary__container">
         <div className="summary__content">
