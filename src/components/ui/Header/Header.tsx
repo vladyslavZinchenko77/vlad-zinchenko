@@ -6,6 +6,13 @@ import './Header.scss';
 const Header: FC = () => {
   const menuItemsRef = useRef<HTMLUListElement>(null);
 
+  const scrollToSection = (id: string) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   useEffect(() => {
     if (menuItemsRef.current) {
       const menuItems = menuItemsRef.current.children;
@@ -29,7 +36,7 @@ const Header: FC = () => {
   }, []);
 
   return (
-    <header className="header">
+    <header className="header" id="header">
       <div className="header__container">
         <div className="header__logo">
           <p className="header__logo-text">CV Landing Page</p>
@@ -38,7 +45,13 @@ const Header: FC = () => {
           <ul ref={menuItemsRef} className="header__menu-list">
             {menuItems.map((item) => (
               <li key={item.id} className="header__menu-item">
-                <a href={`#${item.id}`} className="header__menu-link">
+                <a
+                  href={`#${item.id}`}
+                  className="header__menu-link"
+                  onClick={() => {
+                    scrollToSection(item.sectionId);
+                  }}
+                >
                   {item.title}
                 </a>
               </li>
@@ -53,10 +66,9 @@ const Header: FC = () => {
 export default Header;
 
 const menuItems = [
-  { id: 'home', title: 'home' },
-  { id: 'summary', title: 'summary' },
-  { id: 'skills', title: 'skills' },
-  { id: 'works', title: 'works' },
-  { id: 'education', title: 'education' },
-  { id: 'contacts', title: 'contacts' },
+  { id: 'homeLink', title: 'home', sectionId: 'header' },
+  { id: 'summaryLink', title: 'summary', sectionId: 'summary' },
+  { id: 'skillsLink', title: 'skills', sectionId: 'skills' },
+  { id: 'worksLink', title: 'projects', sectionId: 'projects' },
+  { id: 'contactsLink', title: 'contacts', sectionId: 'contacts' },
 ];
