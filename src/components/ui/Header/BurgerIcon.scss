@@ -1,0 +1,53 @@
+@import "../../../styles/variables.scss";
+.header__burger{
+    display: none;
+    cursor: pointer;
+    @media screen  and (max-width:950px){
+        display: block;
+    }
+   .header__burger-icon{
+    width: 30px;
+    height: 20px;
+    margin-right: 20px;
+        & span{
+            display: block;
+            height: 3px;
+            width: 30px;
+            background-color: #333;
+            margin-top: 5px;
+            border-radius: 5px;
+        }
+        & span:first-child{
+            display: block;
+            height: 3px;
+            width: 30px;
+            background-color: #333;
+            border-radius: 3px;
+            margin-top: 0;
+        }
+   }
+   .header__burger-icon.open{
+    width: 30px;
+    height: 20px;
+       
+        & span:first-child{
+            transform: translateY(8px) rotate(45deg);
+            transition: 0.2s;
+        }
+        & span:nth-child(2n){
+            opacity: 0;
+        }
+        & span:last-child{
+            transform: translateY(-8px) rotate(-45deg);
+            transition: 0.2s;
+        }
+   }
+}
+
+.header__burger-menu.open{
+@media screen  and (max-width:950px){
+    display: block;
+    transition: 00.2s;
+}
+
+}

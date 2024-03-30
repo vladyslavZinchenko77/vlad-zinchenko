@@ -1,11 +1,16 @@
 'use client';
-import { FC, useEffect, useRef } from 'react';
+import { FC, useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
+import { useBreakpoints } from '@/hooks/useBreakpoints';
+
 import Logo from '@/components/common/Logo/Logo';
+import BurgerIcon from './BurgerIcon';
 import './Header.scss';
 
 const Header: FC = () => {
   const menuItemsRef = useRef<HTMLUListElement>(null);
+  const [isOpenMenu, setIsOpenMenu] = useState<boolean>(false);
+  const { isDesktop } = useBreakpoints();
 
   const scrollToSection = (id: string) => {
     const section = document.getElementById(id);
@@ -40,10 +45,9 @@ const Header: FC = () => {
     <header className="header" id="header">
       <div className="header__container">
         <div className="header__logo">
-          {/* <p className="header__logo-text">CV Landing Page</p> */}
           <Logo />
         </div>
-        <nav className="header__menu">
+        <nav className={isOpenMenu ? 'header__burger' : 'header__menu'}>
           <ul ref={menuItemsRef} className="header__menu-list">
             {menuItems.map((item) => (
               <li key={item.id} className="header__menu-item">
@@ -60,6 +64,7 @@ const Header: FC = () => {
             ))}
           </ul>
         </nav>
+        <BurgerIcon isOpenMenu={isOpenMenu} setIsOpenMenu={setIsOpenMenu} />
       </div>
     </header>
   );
