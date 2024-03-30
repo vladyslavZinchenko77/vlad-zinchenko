@@ -51,18 +51,7 @@ const Skills: FC = () => {
       '#skills-title',
       { opacity: 0, y: 50 },
       { opacity: 1, y: 0, duration: 1 }
-    ).fromTo(
-      '.skill',
-      { opacity: 0, y: 50 },
-      { opacity: 1, y: 0, duration: 1 },
-      '-=0.5'
     );
-    // .fromTo(
-    //   '.skills__wrap-item',
-    //   { opacity: 0, y: 50, delay: 1 },
-    //   { opacity: 1, y: 0, duration: 1 },
-    //   '-=0.5'
-    // );
 
     skills.forEach((_, index) => {
       tl.fromTo(

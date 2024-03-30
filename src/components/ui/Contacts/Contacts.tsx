@@ -37,7 +37,7 @@ const Contacts: FC = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: '.contacts',
-        start: 'top',
+        start: 'top center',
         toggleActions: 'restart none none none',
         onEnter: () => console.log('ScrollTrigger entered'),
         onLeave: () => console.log('ScrollTrigger left'),
