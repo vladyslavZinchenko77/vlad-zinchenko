@@ -60,89 +60,35 @@
     }
   }
 
-  .header__burger {
-    display: none;
+}
 
-    @media screen and (max-width: $tablet-max) {
-      display: block;
-    }
 
-    &-icon {
-      width: 30px;
-      height: 20px;
-      margin-right: 20px;
-
-      span {
-        display: block;
-        height: 3px;
-        width: 30px;
-        background-color: $dark-brown-color;
-        margin-top: 5px;
-        border-radius: 5px;
-
-        &:first-child {
-          margin-top: 0;
-        }
-      }
-
-      &.open {
-        span:first-child {
-          transform: translateY(8px) rotate(45deg);
-        }
-        span:nth-child(2n) {
-          opacity: 0;
-        }
-        span:last-child {
-          transform: translateY(-8px) rotate(-45deg);
-        }
-      }
-    }
-  }
-
-  &__burger-menu {
-    display: none;
-
-    @media screen and (max-width: $tablet-max) {
-      position: absolute;
-      top: 50px;
-      left: 0;
-      right: 0;
-      background-color: $dark-brown-color;
-
-      &--list {
-        .header__burger-menu--item {
-          display: flex;
-          justify-content: center;
+.header__burger{
+  .header__menu-list{
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: #FDAB30;
+    list-style: none;
+    .header__menu-item{
+      padding: 20px;
+      transition: 0.2s;
+        &:hover{
+          background-color: #333;
           transition: 0.2s;
-
-          &:hover {
-            background-color: $yellow-color;
-
-            .header__burger-menu--link {
-              color: $dark-brown-color;
-            }
-          }
-
-          .header__burger-menu--link {
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 20px;
-            color: #fff;
-            padding: 10px 0;
-            transition: 0.2s;
-          }
         }
-      }
-    }
-
-    &.open {
-      @media screen and (max-width: $tablet-max) {
-        display: block;
+      .header__menu-link{
+        text-decoration: none;
+        font-size: 20px;
+        color: #ffffff;
+        padding-left: 40px;
+        text-transform: uppercase;
+       
+       
       }
     }
   }
 }
-
-
 
 

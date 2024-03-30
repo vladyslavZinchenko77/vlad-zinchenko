@@ -57,7 +57,7 @@ const Contacts: FC = () => {
         `.contacts__wrap-item:nth-child(${index + 1})`,
         { opacity: 0, y: 50 },
         { opacity: 1, y: 0, duration: 1 },
-        index * 0.5 // Задержка для каждого контакта
+        index * 0.5
       );
     });
   }, []);
