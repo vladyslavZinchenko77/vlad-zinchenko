@@ -1,12 +1,7 @@
 import { FC } from 'react';
-
 import Image from 'next/image';
-
+import { FingerAnimProps } from '@/types/commonTypes';
 import './FingerAnimation.scss';
-
-interface FingerAnimProps {
-  id: string;
-}
 
 const FingerAnimation: FC<FingerAnimProps> = ({ id }) => {
   return (

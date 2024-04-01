@@ -1,5 +1,10 @@
 
 
+export interface FingerAnimProps {
+  id: string;
+}
+
+
 export interface WorkItemInterface{
     title: string;
     description: string;
