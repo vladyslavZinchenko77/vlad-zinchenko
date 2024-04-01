@@ -1,4 +1,9 @@
 
+export interface TitleProps {
+  text: string;
+  id: string;
+}
+
 
 export interface FingerAnimProps {
   id: string;
