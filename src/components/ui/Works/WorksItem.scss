@@ -4,7 +4,6 @@
     max-width: 800px;
     height: 0;
     padding-bottom: 86%;
-    // background: linear-gradient(270deg, #FDAB30 0%, #FDC830 72.92%);
     border-radius: 20px;
     box-shadow: 0px 10px 15px rgba(188,29,103,0.35); 
 
@@ -27,6 +26,7 @@
 
     .work-item__img{
       max-width: 500px;
+      width: 85%;
       padding: 20px;
       height: auto;
     }
