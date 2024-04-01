@@ -1,10 +1,6 @@
 import { FC } from 'react';
+import { TitleProps } from '@/types/commonTypes';
 import './Title.scss';
-
-interface TitleProps {
-  text: string;
-  id: string;
-}
 
 const Title: FC<TitleProps> = ({ text, id }) => {
   return (

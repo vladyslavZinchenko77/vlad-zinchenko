@@ -70,7 +70,7 @@ const Hero: FC = () => {
             id="btn"
             styles={{ marginTop: 24 }}
             isLink={true}
-            hRef={linkToCv}
+            href={linkToCv}
           >
             download CV{' '}
             <Image
