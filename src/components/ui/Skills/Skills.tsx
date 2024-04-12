@@ -73,8 +73,8 @@ const Skills: FC = () => {
               <div className="skills__wrap-item">
                 <Image
                   src={skill.icon}
-                  width={150}
-                  height={150}
+                  width={100}
+                  height={100}
                   alt={skill.name}
                 />
               </div>

@@ -17,10 +17,14 @@
         grid-template-columns:  repeat(4, 1fr);
         gap: 50px;
         .skills__wrap-item{
-            @media screen and (max-width: 450px){
-               display: flex;
-               justify-content: center;
-            }
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            cursor: pointer;
+            transition: 0.2s;
         }
         @media screen and (max-width: 850px){
             grid-template-columns:  repeat(2, 1fr);
