@@ -1,4 +1,10 @@
+@import '../../../../src/styles/variables.scss';
+
 .contacts{
+
+    background-color: $black-color;
+    padding: 40px 0 80px;
+
     .contacts__container{
         max-width: 1200px;
         margin: 0 auto;
@@ -25,7 +31,7 @@
                 margin-left: 50px;
                 
                 .contacts__wrap-item--title{
-                    color: #333;
+                    color: $white-color;
                     font-size: 32px;
                     font-weight: 400;
                 }
@@ -36,7 +42,7 @@
                     padding-top: 8px;
                     &:nth-child(2),
                     &:nth-child(3){
-                        color: #333;
+                        color: $white-color;
                         
                     }
                     @media screen and (max-width: 450px) {

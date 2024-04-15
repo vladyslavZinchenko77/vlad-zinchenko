@@ -44,7 +44,7 @@ const Summary: FC = () => {
 
   return (
     <section className="summary" id="summary">
-      <Title text="summary" id="summary-title" />
+      <Title text="summary" id="summary-title" style={{ color: '#ffffff' }} />
       <div className="summary__container">
         <div className="summary__content">
           <p className="summary__content-text">

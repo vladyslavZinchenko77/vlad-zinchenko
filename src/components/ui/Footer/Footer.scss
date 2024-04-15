@@ -2,6 +2,7 @@
 
 .footer{
     padding: 10px 0;
+    background-color: $black-color;
     .footer__container{     
         display: flex;
         justify-content: center;
@@ -18,7 +19,7 @@
          transition: all 0.2s;
          color: $blue-color ;
     &:hover{
-        color: gray;
+        color: $white-color;
         transition: all 0.2s;
     }
   }
