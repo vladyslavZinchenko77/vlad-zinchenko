@@ -1,7 +1,9 @@
+import {CSSProperties} from 'react'
 
 export interface TitleProps {
   text: string;
   id: string;
+  style?: CSSProperties
 }
 
 
