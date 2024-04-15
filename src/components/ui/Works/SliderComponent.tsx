@@ -36,7 +36,7 @@ const works: WorkItemInterface[] = [
     description: 'lorem colorem description',
     imgUrl: '/img/work5.png',
     colorClassName: 'green',
-    projectLink: 'https://franny-delta.vercel.app/',
+    projectLink: 'https://getfranny.com/',
   },
 ];
 

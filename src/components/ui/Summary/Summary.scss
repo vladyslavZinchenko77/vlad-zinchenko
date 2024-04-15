@@ -3,6 +3,7 @@
 .summary{
     max-width: 100%;
     padding: 100px 0 20px;
+    background-color: $black-color;
     .summary__container{
         margin: 0 auto;
     }
@@ -25,7 +26,7 @@
   
         .summary__content-text{
            font-size: 18px;
-           color: $dark-brown-color;
+           color: $white-color;
            text-align: center;
            width: 50%;
            padding-right: 24px;
