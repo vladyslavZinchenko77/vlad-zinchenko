@@ -65,7 +65,7 @@ const Skills: FC = () => {
 
   return (
     <section className="skills" id="skills">
-      <Title id="skills-title" text="skills" />
+      <Title id="skills-title" text="skills" style={{ color: '#ffffff' }} />
       <div className="skills__container">
         <div className="skills__wrap">
           {skills.map((skill, index) => (

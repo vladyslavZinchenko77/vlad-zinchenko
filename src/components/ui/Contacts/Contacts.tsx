@@ -15,15 +15,23 @@ import TelegramIcon from '@mui/icons-material/Telegram';
 import './Contacts.scss';
 
 const contacts: ContactItemType[] = [
-  { icon: <LocationOnIcon />, title: 'Location', text: 'Ukraine' },
-  { icon: <PhoneIphoneIcon />, title: 'Phone', text: '+38 (098) 253 2614' },
   {
-    icon: <EmailIcon />,
+    icon: <LocationOnIcon style={{ color: '#ffffff' }} />,
+    title: 'Location',
+    text: 'Ukraine',
+  },
+  {
+    icon: <PhoneIphoneIcon style={{ color: '#ffffff' }} />,
+    title: 'Phone',
+    text: '+38 (098) 253 2614',
+  },
+  {
+    icon: <EmailIcon style={{ color: '#ffffff' }} />,
     title: 'E-mail',
     text: 'vladyslav.zinchenko@gmail.com',
   },
   {
-    icon: <TelegramIcon />,
+    icon: <TelegramIcon style={{ color: '#ffffff' }} />,
     title: 'Telegram',
     text: '@vlad_zinchenko92',
   },
@@ -63,7 +71,11 @@ const Contacts: FC = () => {
   }, []);
   return (
     <section className="contacts" id="contacts">
-      <Title id="contacts-title" text="My contacts" />
+      <Title
+        id="contacts-title"
+        text="My contacts"
+        style={{ color: '#ffffff' }}
+      />
       <div className="contacts__container">
         <div className="contacts__wrap">
           {contacts.map((item, index) => {
