@@ -47,12 +47,8 @@ const Contacts: FC = () => {
         trigger: '.contacts',
         start: 'top center',
         toggleActions: 'restart none none none',
-        onEnter: () => console.log('ScrollTrigger entered'),
-        onLeave: () => console.log('ScrollTrigger left'),
       },
     });
-
-    console.log('Timeline created');
 
     tl.fromTo(
       '#contacts-title',
