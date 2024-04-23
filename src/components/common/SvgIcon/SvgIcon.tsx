@@ -15,7 +15,7 @@ import reactSvg from '../../../../public/svg/React-icon.svg';
 import nextSvg from '../../../../public/svg/nextjs.svg';
 import gitSvg from '../../../../public/svg/git.svg';
 
-type IconType =
+export type IconType =
   | 'html'
   | 'css'
   | 'js'

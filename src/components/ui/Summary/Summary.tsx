@@ -16,8 +16,6 @@ const Summary: FC = () => {
         trigger: '.summary',
         start: 'top 80%',
         toggleActions: 'restart none none none',
-        onEnter: () => console.log('ScrollTrigger entered'),
-        onLeave: () => console.log('ScrollTrigger left'),
       },
     });
 
