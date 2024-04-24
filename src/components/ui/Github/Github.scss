@@ -1,0 +1,19 @@
+@import "../../../styles/variables.scss";
+
+.github{
+    padding: 40px 0;
+    background-color: $black-color;
+    .github__content{
+        display: flex;
+        justify-content: space-between;
+        margin: 100px;
+        .github__content-logo{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
+
+
+
