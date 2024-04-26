@@ -9,6 +9,7 @@
     { name: 'ts' },
     { name: 'styleComponents' },
     { name: 'git' },
+    { name: 'npm' },
     { name: 'react' },
     { name: 'next' },
   ];
