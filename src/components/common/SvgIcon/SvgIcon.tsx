@@ -14,6 +14,7 @@ import styleCompSvg from '../../../../public/svg/styledcomponents.svg';
 import reactSvg from '../../../../public/svg/React-icon.svg';
 import nextSvg from '../../../../public/svg/nextjs.svg';
 import gitSvg from '../../../../public/svg/git.svg';
+import npmSvg from '../../../../public/svg/npm.svg';
 
 export type IconType =
   | 'html'
@@ -27,7 +28,8 @@ export type IconType =
   | 'styleComponents'
   | 'react'
   | 'next'
-  | 'git';
+  | 'git'
+  | 'npm';
 
 const SvgIcon: React.FC<{
   type: IconType;
@@ -48,6 +50,7 @@ const SvgIcon: React.FC<{
     react: reactSvg,
     next: nextSvg,
     git: gitSvg,
+    npm: npmSvg,
   }[type];
 
   return (

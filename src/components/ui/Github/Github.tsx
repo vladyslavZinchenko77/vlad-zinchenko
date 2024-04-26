@@ -60,6 +60,7 @@ const Github: FC = () => {
           </a>
         </div>
         <Image
+          className="github__img"
           loading="lazy"
           width={950}
           height={226}
