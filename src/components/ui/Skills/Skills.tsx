@@ -43,15 +43,15 @@ const Skills: FC = () => {
       <div className="skills__container">
         <div className="skills__wrap">
           {skills.map((skill, index) => (
-            <div key={index}>
-              <div className="skills__wrap-item">
-                <SvgIcon
-                  type={skill.name as IconType}
-                  height={100}
-                  width={100}
-                  key={index}
-                />
-              </div>
+            // <div key={index}>
+            <div key={index} className="skills__wrap-item">
+              <SvgIcon
+                type={skill.name as IconType}
+                height={100}
+                width={100}
+                key={index}
+              />
+              {/* </div> */}
             </div>
           ))}
         </div>
