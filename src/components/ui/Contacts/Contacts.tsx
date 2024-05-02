@@ -40,7 +40,6 @@ const contacts: ContactItemType[] = [
 const Contacts: FC = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-    console.log('useEffect triggered');
 
     const tl = gsap.timeline({
       scrollTrigger: {

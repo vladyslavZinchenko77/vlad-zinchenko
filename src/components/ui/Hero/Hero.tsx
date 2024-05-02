@@ -1,6 +1,7 @@
 'use client';
 import React, { FC, useEffect, useState } from 'react';
 import { gsap } from 'gsap';
+import { useBreakpoints } from '@/hooks/useBreakpoints';
 import Btn from '@/components/common/Btn/Btn';
 import Image from 'next/image';
 import ScrollIcon from '@/components/common/ScrollIcon/ScrollIcon';
@@ -8,7 +9,8 @@ import './Hero.scss';
 
 const Hero: FC = () => {
   const [changingText, setChangingText] = useState<string>('Frontend');
-  const words: string[] = ['Frontend', 'Markup', 'Web'];
+  const { isTablet } = useBreakpoints();
+  const words: string[] = ['Front end', 'Markup', 'Web'];
   let currentWordIndex: number = 0;
   let currentLetterIndex: number = 0;
 

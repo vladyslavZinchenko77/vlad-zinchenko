@@ -9,7 +9,6 @@ import './Summary.scss';
 const Summary: FC = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-    console.log('useEffect triggered');
 
     const tl = gsap.timeline({
       scrollTrigger: {
