@@ -10,6 +10,8 @@
     { name: 'styleComponents' },
     { name: 'git' },
     { name: 'npm' },
+    { name: 'zustand'},
     { name: 'react' },
+    { name: 'redux' },
     { name: 'next' },
   ];
