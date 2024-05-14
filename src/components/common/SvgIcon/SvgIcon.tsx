@@ -15,6 +15,8 @@ import reactSvg from '../../../../public/svg/React-icon.svg';
 import nextSvg from '../../../../public/svg/nextjs.svg';
 import gitSvg from '../../../../public/svg/git.svg';
 import npmSvg from '../../../../public/svg/npm.svg';
+import reduxSvg from '../../../../public/svg/redux.svg';
+import zustandIcon from '../../../../public/img/zustand.png';
 
 export type IconType =
   | 'html'
@@ -29,7 +31,9 @@ export type IconType =
   | 'react'
   | 'next'
   | 'git'
-  | 'npm';
+  | 'npm'
+  | 'redux'
+  | 'zustand';
 
 const SvgIcon: React.FC<{
   type: IconType;
@@ -51,6 +55,8 @@ const SvgIcon: React.FC<{
     next: nextSvg,
     git: gitSvg,
     npm: npmSvg,
+    redux: reduxSvg,
+    zustand: zustandIcon,
   }[type];
 
   return (
