@@ -24,7 +24,7 @@ const socials: SocialsType[] = [
   },
   {
     icon: <GitHubIcon className="footer__icon" />,
-    url: 'https://gitlab.com/vladyslav.zinchenko77',
+    url: 'https://github.com/vladyslavZinchenko77',
   },
   {
     icon: <TelegramIcon className="footer__icon" />,
@@ -38,7 +38,12 @@ const Footer: FC = () => {
       <div className="footer__container">
         {socials.map((item, index) => {
           return (
-            <a className="footer__link" key={index} href={item.url}>
+            <a
+              className="footer__link"
+              target="_blank"
+              key={index}
+              href={item.url}
+            >
               {item.icon}
             </a>
           );
